@@ -1,5 +1,6 @@
 'use strict'
-const store = require('../../store')
+const store = require('../store')
+const itemHandlebars = require('../templates/item-listing.handlebars')
 // USER SIGN-UP SUCCESS AND FAILURE
 
 const signUpSuccess = function (data) {
@@ -22,9 +23,13 @@ const signInSuccess = function (data) {
   $('#change-your-password').show()
   $('.forms-to-hide').show()
   $('.change-password-hide').show()
-  $('hide-sign-out').show()
+  $('.hide-sign-out').show()
   $('#sign-up').hide()
   $('#sign-in').hide()
+  $('#sign-out').show()
+  $('#getitems').show()
+  const getItemsHtml = itemHandlebars({ items: data.items })
+  $('.content').html(getItemsHtml)
 
   // DELETE THE GAME STUFF
 }
@@ -53,6 +58,8 @@ const signOutSuccess = function () {
   $('#sign-in').show()
   $('#change-your-password').hide()
   $('.ui').hide()
+  $('.content').empty()
+
   // SEE WHAT UI WAS IN THE LAST PROJECT
   // DELETE GAME STUFF
 }

@@ -1,36 +1,18 @@
 const config = require('../config')
 const store = require('../store.js')
 
-const getItem = function() {
-  return $.ajax({
-    url: config.apiUrl + '/items',
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
-  })
-}
-
-const createItem = function(data) {
+const createItem = function (data) {
   return $.ajax({
     url: config.apiUrl + '/items',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: {
-      'item': {
-        'name': data.name,
-        'description': data.description,
-        'color': data.color,
-        'season': data.season,
-        'status': data.status
-      }
-    }
+    data
   })
 }
 
-const deleteItem = function(id) {
+const deleteItem = function (id) {
   return $.ajax({
     url: config.apiUrl + `/items/${id}`,
     method: 'DELETE',
@@ -40,7 +22,7 @@ const deleteItem = function(id) {
   })
 }
 
-const getItems = function(data) {
+const getItems = function (data) {
   return $.ajax({
     url: config.apiUrl + '/items',
     method: 'GET',
@@ -49,38 +31,31 @@ const getItems = function(data) {
     }
   })
 }
-const updateEvent = function(data, id) {
-    return $.ajax({
-        url: config.apiUrl + `/items/${id}`,
-        method: 'PATCH',
-        headers: {
-          Authorization: 'Token token=' + store.user.token
-        },
-        data: {
-          'item': {
-            'name': data.name,
-            'description': data.description,
-            'color': data.color,
-            'season': data.season,
-            'status': data.status
-          }
-        })
+const updateItem = function (data) {
+  return $.ajax({
+    url: config.apiUrl + `/items/${data.item.id}`,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+const showItem = function (id) {
+  return $.ajax({
+    url: config.apiUrl + `/items/${id}`,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
     }
-    const showItem = function(id) {
-      return $.ajax({
-        url: config.apiUrl + `/items/${id}`,
-        method: 'GET',
-        headers: {
-          Authorization: 'Token token=' + store.user.token
-        }
-      })
-    }
-    //  how do I do it when clearing the closet for the user
+  })
+}
+//  how do I do it when clearing the closet for the user
 
-    module.exports = {
-      createItem,
-      deleteItem,
-      getItem,
-      updateItem,
-      showItem
-    }
+module.exports = {
+  createItem,
+  deleteItem,
+  getItems,
+  updateItem,
+  showItem
+}

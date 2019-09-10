@@ -1,4 +1,36 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Gruppo&display=swap');
+
+h1 {
+  font-family:  'Gruppo', cursive;
+  text-align: center;
+}
+
+body {
+  background-image: url('./public/Option1.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-top: 25%;
+  padding-bottom: 25%;
+}
+
+legend {
+  font-family:  'Gruppo', cursive;
+  font-size: 25px;
+}
+
+input[type=text], select {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
 
 .forms-to-hide {
   display: none;
@@ -9,5 +41,27 @@
 }
 
 .hide-sign-out {
+  display: none;
+}
+
+.jumbotron {
+background-color:rgba(208, 224, 251, 1);
+padding-top: 55%;
+padding-bottom: 55%;
+}
+
+.lead {
+  font-family:  'Gruppo', cursive;
+  text-align: center;
+}
+
+.creating {
+  font-family:  'Gruppo', cursive;
+  font-weight: bold;
+  font-size:  20px;
+  color : rgba(55, 125, 54, 1);
+}
+
+#getitems {
   display: none;
 }

@@ -11,5 +11,23 @@ const limit = (str, length) => {
     return str.substring(0, length) + '...'
   }
 }
-
-module.exports = limit
+const displayItem = {
+  name: 'name',
+  description: 'description',
+  color: 'color',
+  season: 'season',
+  status: 'status'
+}
+const showItem = {
+  id: 'id',
+  name: 'name',
+  description: 'description',
+  color: 'color',
+  season: 'season',
+  status: 'status'
+}
+module.exports = {
+  limit,
+  displayItem,
+  showItem
+}

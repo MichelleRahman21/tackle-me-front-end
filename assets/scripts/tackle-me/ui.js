@@ -6,6 +6,7 @@ const tackleMeFrontEnd = require('../templates/item-listing.handlebars')
 const getItemsSuccess = (data) => {
   const getItemsHtml = tackleMeFrontEnd({ items: data.items })
   $('.content').html(getItemsHtml)
+  $('.user-message').text('This is your closet!')
 }
 
 const clearItems = () => {
@@ -19,19 +20,27 @@ const failure = (error) => {
 const createItemSuccess = (data) => {
   const createItemHtml = tackleMeFrontEnd({item: data.item})
   $('.content').html(createItemHtml)
+  $('form').trigger('reset')
+  $('.user-message').text('You added something cool to the closet!')
 }
 
 const deleteItemSuccess = () => {
-  $('.content').remove()
+  // $('.content').remove()
+  $('form').trigger('reset')
+  $('.user-message').text('You deleted an item!')
 }
 
 const showItemSuccess = (data) => {
   const showItemHtml = tackleMeFrontEnd({item: data.item})
   $('.content').html(showItemHtml)
+  $('form').trigger('reset')
+// I should display the item with it's attributes
 }
 const updateItemSuccess = (data) => {
   const updateItemHtml = tackleMeFrontEnd({item: data.item})
   $('.content').html(updateItemHtml)
+  $('form').trigger('reset')
+  $('.user-message').text('Go check the closet to see your changes!')
 }
 // EXAMPLES
 // const signUpSuccess = function (data) {
