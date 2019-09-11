@@ -1,166 +1,170 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Tackle-Me</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Tackle-Me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-1">TACKLE ME!</h1>
-    <p class="lead">Manage your closet.</p>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-1">TACKLE ME!</h1>
+      <p class="lead">Manage your closet.</p>
+    </div>
   </div>
-</div>
+  <br>
+
+  <br>
+  <div class="content" id="content"></div>
+
+  <!-- <div class="content-show" id="content-show"></div> -->
+
+  <div class="modal fade" id="statsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Stats</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="user-status"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </section>
+  <!-- BUTTON SECTION END -->
+  <!-- USER MESSAGE -->
+
+  <section class="d-flex justify-content-center">
+    <div class="user-message"></div>
+  </section>
+  <br>
+  <!-- USER MESSAGE END  -->
+  <!-- SIGN-IN/ SIGN-UP DIVS  -->
+  <div class="sign-in-container">
+
+    <form class="auth-form" id="sign-up">
+      <fieldset>
+        <legend>Sign Up</legend>
+        <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
+        <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+        <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Password Confirmation">
+        <button type="submit" class="btn btn-primary">sign up</button>
+        <!-- <p>Already have an account? <a class="sign-in-link" href="#">Click here to sign in</a>.</p> -->
+      </fieldset>
+    </form>
+
+    <form class="auth-form" id="sign-in">
+      <fieldset>
+        <legend>Sign In</legend>
+        <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
+        <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+        <button type="submit" class="btn btn-primary">sign in</button>
+        <!-- <p>Join us! <a class="sign-up-link" href="#">Click here to sign up</a>.</p> -->
+      </fieldset>
+    </form>
+  </div>
+  <br>
+  <!-- SIGN-OUT BUTTON -->
+  <div class="hide-sign-out">
+    <form id="sign-out">
+      <button type="submit" class="btn btn-primary">Sign out</button>
+    </form>
+    <br>
+  </div>
+  <div class="forms-to-hide">
+    <button id="getitems" class="btn btn-outline-dark">Get your items</button><br>
+
+    <!-- FORMS FOR CREATE -->
+    <br>
+    <p class="p-create">You can add down below anything that you've recently purchased</p><br>
+    <section class="user-forms">
+      <form id="create-item">
+        Name:<br>
+        <input type="text" name="item[name]" value=" ">
+        <br>
+        Description:<br>
+        <input type="text" name="item[description]" value=" ">
+        <br>
+        Color:<br>
+        <input type="text" name="item[color]" value=" ">
+        <br>
+        Season:<br>
+        <input type="text" name="item[season]" value=" ">
+        <br>
+        Status:<br>
+        <input type="text" name="item[status]" value=" ">
+        <br><br>
+        <input type="submit" class="btn btn-outline-dark" value="Add something to your closet!">
+      </form>
       <br>
 
-      <br>
-      <div class="content" id="content"></div>
+      <!-- FORMS FOR UPDATE -->
+      <p class="p-update">Is any of your items getting to old? Loosing it's color? Save it here! </p><br>
+      <form id="update-item">
+        ID:<br>
+        <input type="text" name="item[id]" value=" ">
+        <br>
+        Name:<br>
+        <input type="text" name="item[name]" value=" ">
+        <br>
+        Description:<br>
+        <input type="text" name="item[description]" value=" ">
+        <br>
+        Color:<br>
+        <input type="text" name="item[color]" value=" ">
+        <br>
+        Season:<br>
+        <input type="text" name="item[season]" value=" ">
+        <br>
+        Status:<br>
+        <input type="text" name="item[status]" value=" ">
+        <br><br>
+        <input type="submit" class="btn btn-outline-dark" value="Update an item">
+      </form>
+    </section>
+    <br>
 
-      <!-- <div class="content-show" id="content-show"></div> -->
+    <!-- FORMS DElETTING ITEM -->
+    <p class="p-delete">Tackle me or donate me!</p><br>
+    <form id="delete-item" class="btn btn-outline-dark">
+      ID:<br>
+      <input type="text" name="item[id]" value=" ">
+      <br><br>
+      <input type="submit" value="Delete">
+    </form>
+    </section>
+    <br>
 
-             <div class="modal fade" id="statsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-               <div class="modal-dialog" role="document">
-                 <div class="modal-content">
-                   <div class="modal-header">
-                     <h5 class="modal-title" id="exampleModalLabel">Stats</h5>
-                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                       <span aria-hidden="true">&times;</span>
-                     </button>
-                   </div>
-                   <div class="modal-body">
-                       <div class="user-status"></div>
-                   </div>
-                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                   </div>
-                 </div>
-               </div>
-             </div>
+    <!-- FORMS SHOW  ITEM -->
+    <br>
+    <p class="p-show">See any of your items by id!</p><br>
+    <form id="show-item" class="btn btn-outline-dark">
+      ID:<br>
+      <input type="text" name="item[id]" value=" ">
+      <br><br>
+      <input type="submit" value="See an item!">
+    </form>
+    </section>
+    <br>
 
-           </section>
-<!-- BUTTON SECTION END -->
-<!-- USER MESSAGE -->
-
-            <section class="d-flex justify-content-center">
-              <div class="user-message"></div>
-            </section>
-            <br>
-            <!-- USER MESSAGE END  -->
-<!-- SIGN-IN/ SIGN-UP DIVS  -->
-<div class="sign-in-container">
-
-              <form class="auth-form" id="sign-up">
-                <fieldset>
-                  <legend>Sign Up</legend>
-                  <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
-                  <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
-                  <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Password Confirmation">
-                  <button type="submit" class="btn btn-primary">sign up</button>
-                  <!-- <p>Already have an account? <a class="sign-in-link" href="#">Click here to sign in</a>.</p> -->
-                </fieldset>
-              </form>
-
-              <form class="auth-form" id="sign-in">
-                <fieldset>
-                  <legend>Sign In</legend>
-                  <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
-                  <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
-                  <button type="submit" class="btn btn-primary">sign in</button>
-                  <!-- <p>Join us! <a class="sign-up-link" href="#">Click here to sign up</a>.</p> -->
-                </fieldset>
-              </form>
-            </div>
-          <br>
-          <!-- SIGN-OUT BUTTON -->
-          <div class="hide-sign-out">
-                 <form id="sign-out">
-                   <button type="submit" class="btn btn-primary">Sign out</button>
-                 </form>
-                 <br>
-               </div>
-               <div class="forms-to-hide">
-                 <button id="getitems" class="btn btn-outline-dark">Get your items</button><br>
-
-                   <!-- FORMS FOR CREATE -->
-                   <p class="p-create">You can add down below anything that you've recently purchased</p><br>
-                   <section class="user-forms">
-                   <form id="create-item">
-               Name:<br>
-               <input type="text" name="item[name]" value=" ">
-               <br>
-               Description:<br>
-               <input type="text" name="item[description]" value=" ">
-               <br>
-               Color:<br>
-               <input type="text" name="item[color]" value=" ">
-               <br>
-               Season:<br>
-               <input type="text" name="item[season]" value=" ">
-               <br>
-               Status:<br>
-               <input type="text" name="item[status]" value=" ">
-               <br><br>
-               <input type="submit" class="btn btn-outline-dark" value="Add something to your closet!">
-               </form>
-               <br>
-
-               <!-- FORMS FOR UPDATE -->
-               <p class="p-update">Is any of your items getting to old? Loosing it's color? Save it here! </p><br>
-               <form id="update-item">
-                 ID:<br>
-                 <input type="text" name="item[id]" value=" ">
-                 <br>
-               Name:<br>
-               <input type="text" name="item[name]" value=" ">
-               <br>
-               Description:<br>
-               <input type="text" name="item[description]" value=" ">
-               <br>
-               Color:<br>
-               <input type="text" name="item[color]" value=" ">
-               <br>
-               Season:<br>
-               <input type="text" name="item[season]" value=" ">
-               <br>
-               Status:<br>
-               <input type="text" name="item[status]" value=" ">
-               <br><br>
-               <input type="submit" class="btn btn-outline-dark" value="Update an item">
-               </form>
-               </section>
-               <br>
-
-               <!-- FORMS DElETTING ITEM -->
-               <p class="p-delete">Tackle me or donate me!</p><br>
-               <form id="delete-item" class="btn btn-outline-dark">
-               ID:<br>
-               <input type="text" name="item[id]" value=" ">
-               <br><br>
-               <input type="submit" value="Delete">
-               </form>
-               </section>
-               <br>
-
-               <!-- FORMS SHOW  ITEM -->
-               <p class="p-show">See any of your items by id!</p><br>
-               <form id="show-item" class="btn btn-outline-dark">
-               ID:<br>
-               <input type="text" name="item[id]" value=" ">
-               <br><br>
-               <input type="submit"bvalue="See an item!">
-               </form>
-               </section>
-               <br>
-
-               <!-- FORMS GET ITEMS -->
-               <!-- <p class="p-show"> You want to see what's inside? </p><br>
+    <!-- FORMS GET ITEMS -->
+    <!-- <p class="p-show"> You want to see what's inside? </p><br>
                <form id="get-item">
                <br><br>
                <input type="submit" value="Open the closet!">
@@ -169,35 +173,47 @@
                <br> -->
 
 
-               <!-- BUTTON SECTION -->
-               <section class="buttons">
-               <div class="change-password-hide">
-                      <div class="modal fade" id="change-password" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
+    <!-- BUTTON SECTION -->
+    <section class="buttons">
+      <div class="change-password-hide">
+        <div class="modal fade" id="change-password" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
 
 
-                              <form id="change-password-form">
-                                <div class="change-password-message"></div>
-                                <input type="password" name="passwords[old]" placeholder="old password">
-                                <input type="password" name="passwords[new]" placeholder="new password">
-                                <input type="submit" value="Change Password">
-                              </form>
-                            </div>
+                <form id="change-password-form">
+                  <div class="change-password-message"></div>
+                  <input type="password" name="passwords[old]" placeholder="old password">
+                  <input type="password" name="passwords[new]" placeholder="new password">
+                  <input type="submit" value="Change Password">
+                </form>
+              </div>
 
-                          </div>
-                        </div>
-                      </div>
-               <button id="change-your-password" type="button" class="btn btn-primary" data-toggle="modal" data-target="#change-password"> Change your password </button>
-               </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <button id="change-your-password" type="button" class="btn btn-primary" data-toggle="modal" data-target="#change-password"> Change your password </button>
+      </div>
 
-               </div>
-    </body>
+  </div>
+  <div class="media">
+  <!-- <img src="public/IMG_4586.JPG" class="align-self-center mr-3" class ="change" alt="Michelle Rahman"> -->
+  <div class="media-body">
+    <p> This is a full stack application where users can pick what they have in their closet, weather is a trend or not, should they add some new items or throw away some stuff they don't need anymore. People that need to organize their closets, people who know that it is time for a change but they don't have the time to categorize each item on their wardrobe. The idea comes after me thinking the other day that once I get into the job environment I need to change my wardrobe, and separate everything that I don't use anymore, there are some type of clothes that I might need in the future but I can't find a way to organize my wardrobe unless I track the things I have inside it!</p>
+    <a href="https://github.com/MichelleRahman21/tackle-me-front-end"> See the Front-end repo! </a> <br>
+    <a href="https://github.com/MichelleRahman21/tackle-me"> See the Back-end repo here! </a>
+
+  </div>
+</div>
+
+</body>
+
 </html>

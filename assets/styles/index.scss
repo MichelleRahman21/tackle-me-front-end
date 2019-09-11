@@ -62,6 +62,40 @@ padding-bottom: 55%;
   color : rgba(55, 125, 54, 1);
 }
 
+.media-body {
+  font-family:  'Gruppo', cursive;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: justify
+}
+
+.p-create {
+  font-family:  'Gruppo', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(162, 75, 17, 1);
+}
+
+.p-update {
+  font-family:  'Gruppo', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(162, 75, 17, 1);
+}
+
+.p-delete {
+  font-family:  'Gruppo', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(162, 75, 17, 1);
+}
+
+.p-show {
+  font-family:  'Gruppo', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(162, 75, 17, 1);
+}
 #getitems {
   display: none;
 }
