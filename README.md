@@ -9,18 +9,28 @@ I want to design a full stack application where users can pick what they have in
 ### For authentication only:
 
 As a user I want to be able to sign up.
+
 As a user I want to be able to sign in if I already Sign up.
+
 As a user I want to be able to change my password.
+
 As a user I want to get messages for every other action I do in the application.
+
 
 ### For client interface only:
 
 As a user I want to be able to get the list of items with their respective description.
+
 As a user I don't want anybody to get access to my account unless they sign in with theirs.
+
 As user I want to be able to create a new item.
+
 As a user I want to be able to delete an item.
+
 As a user I want to be able to update an item.
+
 As a user I want to be able to view an item.
+
 
 ## How will my table look like
 
@@ -32,6 +42,47 @@ As a user I want to be able to view an item.
 
 ## Wireframes
 ![Wireframe](https://i.imgur.com/Fzr9dLQ.png)
+
+## Tools
+
+### Deployment
+
+> - Github pages
+> - Heroku
+
+### Authentication
+
+> - jQuery for DOM manipulation and event handling.
+> - AJAX
+
+### Front-end
+
+  > - JavaScript app to communicate with the Heroku API and render data that it receives in the browser
+
+  > - jQuery for DOM manipulation and event handling.
+
+  > - Handlebars to display data from the users.
+
+  > - HTML
+
+  > - CSS
+
+### Back-end
+
+I created my own API for this full-stack project using the following tools:
+
+> - Ruby on Rails and Postgresql to build the API .
+
+  > - Created 4RESTful routes for handling (GET, POST,PUT,PATCH and DELETE) requests
+
+
+## Visit my back-end repo!
+
+[Back end repo](https://github.com/MichelleRahman21/tackle-me).
+
+[Deployed back end url](https://tackle-me.herokuapp.com/).
+
+[Deployed front end url](https://michellerahman21.github.io/tackle-me-front-end/).
 
 ## Schedule
 
