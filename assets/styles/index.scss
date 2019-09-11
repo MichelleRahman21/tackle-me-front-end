@@ -1,5 +1,14 @@
 @import '~bootstrap/scss/bootstrap';
+@import '~animate.css/animate.css';
 @import url('https://fonts.googleapis.com/css?family=Gruppo&display=swap');
+
+
+.title {
+  animation-duration: 1s;
+  animation-delay: .5s;
+  // animation-iteration-count: infinite;
+  // this will make the animation go over the browser infinite times! we DO NOT WANT THAT
+}
 
 h1 {
   font-family:  'Gruppo', cursive;
@@ -96,6 +105,7 @@ padding-bottom: 55%;
   font-weight: bold;
   color: rgba(162, 75, 17, 1);
 }
+
 #getitems {
   display: none;
 }
