@@ -2,7 +2,7 @@
 
 ## Project description
 
-I want to design a full stack application where users can pick what they have in their closet, weather is a trend or not, should they add some new items or throw away some stuff they don't need anymore. People that need to organize their closets, people who know that it is time for a change but they don't have the time to categorize each item on their wardrobe. The idea comes after me thinking the other day that once I get into the job environment I need to change my wardrobe, and separate everything I don't use anymore, there are some type of clothes that I might need in the future but I can't find a way to organize my wardrobe unless I track the things I have in it!
+I want to design a full stack application where users can pick what they have in their closet, weather is a trend or not, should they add some new items or throw away some stuff they don't need anymore. People that need to organize their closets, people who know that it is time for a change but they don't have the time to categorize each item on their wardrobe. The idea comes after me thinking the other day that once I get into the job environment I need to change my wardrobe, and separate everything that I don't use anymore, there are some type of clothes that I might need in the future but I can't find a way to organize my wardrobe unless I track the things I have inside it!
 
 ## User story
 
@@ -31,10 +31,7 @@ As a user I want to be able to view an item.
 |   |   |   |   |   |    |
 
 ## Wireframes
-
-![img_5084](https://media.git.generalassemb.ly/user/22076/files/3c44fe80-d026-11e9-9e68-8ac0b61605a9)
-
-[img_5084](https://media.git.generalassemb.ly/userr/22076/files/4404a300-d026-11e9-8d5f-041296f8f5d1)
+![Wireframe](Wireframe-1.png)
 
 ## Schedule
 
