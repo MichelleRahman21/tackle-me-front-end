@@ -13,9 +13,9 @@ const clearItems = () => {
   $('.content').empty()
 }
 
-const failure = (error) => {
-  console.error(error)
-}
+// const failure = (error) => {
+//   // console.error(error)
+// }
 
 const createItemSuccess = (data) => {
   const createItemHtml = tackleMeFrontEnd({item: data.item})
@@ -53,7 +53,7 @@ const updateItemSuccess = (data) => {
 module.exports = {
   getItemsSuccess,
   clearItems,
-  failure,
+  // failure,
   createItemSuccess,
   deleteItemSuccess,
   showItemSuccess,

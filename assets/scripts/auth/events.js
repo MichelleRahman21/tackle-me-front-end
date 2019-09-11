@@ -10,7 +10,7 @@ const onSignUp = function (event) {
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
-  console.log(data)
+  // console.log(data)
 }
 const onSignIn = function (event) {
   event.preventDefault()

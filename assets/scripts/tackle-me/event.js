@@ -14,7 +14,7 @@ const onCreateItem = (event) => {
 const onDeleteItem = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
+  // console.log(data)
   api.deleteItem(data.item.id)
     .then(() => onGetItems(event))
     .then(ui.deleteItemSuccess)
