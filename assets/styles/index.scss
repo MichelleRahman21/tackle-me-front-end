@@ -20,10 +20,10 @@ body {
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
-  padding-left: 25%;
-  padding-right: 25%;
-  padding-top: 25%;
-  padding-bottom: 25%;
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-top: 1%;
+  padding-bottom: 20%;
 }
 
 legend {
@@ -55,8 +55,15 @@ input[type=text], select {
 
 .jumbotron {
 background-color:rgba(208, 224, 251, 1);
-padding-top: 55%;
-padding-bottom: 55%;
+padding-top: .5%;
+padding-bottom: .5%;
+}
+
+.jumbotron-fluid {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 0%;
+  padding-bottom: 0%;
 }
 
 .lead {
