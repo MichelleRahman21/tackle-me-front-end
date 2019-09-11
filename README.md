@@ -31,7 +31,7 @@ As a user I want to be able to view an item.
 |   |   |   |   |   |    |
 
 ## Wireframes
-![Wireframe](Wireframe-1.png)
+![Wireframe](https://imgur.com/a/9FV4VDJ)
 
 ## Schedule
 
