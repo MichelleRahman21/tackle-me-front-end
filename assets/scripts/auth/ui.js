@@ -56,6 +56,8 @@ const signOutSuccess = function () {
   $('form').trigger('reset')
   $('#sign-out').hide()
   $('#sign-in').show()
+  // get the sign-up out when signing-out
+  $('#sign-up').show()
   $('#change-your-password').hide()
   $('.ui').hide()
   $('.content').empty()
