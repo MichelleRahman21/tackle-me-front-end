@@ -42,20 +42,54 @@ const updateItemSuccess = (data) => {
   $('form').trigger('reset')
   $('.user-message').text('Go check the closet to see your changes!')
 }
-// EXAMPLES
-// const signUpSuccess = function (data) {
-//   store.user = data.user
-//   $('.user-message').text('Signed up successfully!')
-//   $('form').trigger('reset')
-//   $('#sign-up').hide()
-//   $('#sign-in').show()
-// }
+
+// THIS IS THE SECTION FOR MY CATEGORIES
+const getCategoriesSuccess = (data) => {
+  const getCategoriesHtml = tackleMeFrontEnd({ categories: data.categories })
+  $('.content').html(getCategoriesHtml)
+  $('.user-message').text('This is your category!')
+}
+
+const clearCategories = () => {
+  $('.content').empty()
+}
+
+const createCategorySuccess = (data) => {
+  const createItemHtml = tackleMeFrontEnd({item: data.item})
+  $('.content').html(createItemHtml)
+  $('form').trigger('reset')
+  $('.user-message').text('You added a category!')
+}
+
+const deleteCategorySuccess = () => {
+  // $('.content').remove()
+  $('form').trigger('reset')
+  $('.user-message').text('You deleted a category!')
+}
+
+const showCategorySuccess = (data) => {
+  const showCategoryHtml = tackleMeFrontEnd({category: data.category})
+  $('.content').html(showCategoryHtml)
+  $('form').trigger('reset')
+}
+const updateCategorySuccess = (data) => {
+  const updateCategoryHtml = tackleMeFrontEnd({category: data.category})
+  $('.content').html(updateCategoryHtml)
+  $('form').trigger('reset')
+  $('.user-message').text('Go check the closet to see your categories!')
+}
 module.exports = {
   getItemsSuccess,
   clearItems,
-  // failure,
   createItemSuccess,
   deleteItemSuccess,
   showItemSuccess,
-  updateItemSuccess
+  updateItemSuccess,
+  // SECTION FOR CATEGORIES
+  getCategoriesSuccess,
+  clearCategories,
+  createCategorySuccess,
+  deleteCategorySuccess,
+  showCategorySuccess,
+  updateCategorySuccess
 }

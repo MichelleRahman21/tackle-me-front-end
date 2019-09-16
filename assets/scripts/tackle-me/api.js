@@ -50,12 +50,67 @@ const showItem = function (id) {
     }
   })
 }
-//  how do I do it when clearing the closet for the user
+// SECTION FOR CATEGORIES
 
+const createCategory = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/categories',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const deleteCategory = function (id) {
+  return $.ajax({
+    url: config.apiUrl + `/categories/${id}`,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const getCategories = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/categories',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+const updateCategory = function (data) {
+  return $.ajax({
+    url: config.apiUrl + `/categories/${data.category.id}`,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+const showCategory = function (id) {
+  return $.ajax({
+    url: config.apiUrl + `/categories/${id}`,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 module.exports = {
   createItem,
   deleteItem,
   getItems,
   updateItem,
-  showItem
+  showItem,
+  // SECTION FOR CATEGORIES
+  createCategory,
+  deleteCategory,
+  getCategories,
+  updateCategory,
+  showCategory
 }

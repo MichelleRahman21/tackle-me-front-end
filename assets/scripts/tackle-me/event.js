@@ -3,6 +3,7 @@ const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api.js')
 const ui = require('./ui.js')
 
+// ACTIONS FOR ITEMS
 const onCreateItem = (event) => {
   event.preventDefault()
   // console.log(event)
@@ -43,6 +44,46 @@ const onUpdateItem = (event) => {
     .catch(ui.failure)
 }
 
+// ACTIONS FOR CATEGORIES
+const onCreateCategory = (event) => {
+  event.preventDefault()
+  // console.log(event)
+  const data = getFormFields(event.target)
+  api.createCategory(data)
+    .then(ui.createCategorySuccess)
+    .catch(ui.failure)
+}
+const onDeleteCategory = (event) => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  // console.log(data)
+  api.deleteCategory(data.category.id)
+    .then(() => onGetItems(event))
+    .then(ui.deleteCategorySuccess)
+    .catch(ui.failure)
+}
+const onGetCategories = (event) => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  // const data = getFormFields(event.target)
+  api.getCategories(data)
+    .then(ui.getItemsSuccess)
+    .catch(ui.failure)
+}
+const onShowCategory = (event) => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.showCategory(data.category.id)
+    .then(ui.showCategorySuccess)
+    .catch(ui.failure)
+}
+const onUpdateCategory = (event) => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.createCategory(data)
+    .then(ui.updateCategorySuccess)
+    .catch(ui.failure)
+}
 const addHandlers = () => {
   $('#create-item').on('submit', onCreateItem)
   $('#delete-item').on('submit', onDeleteItem)
@@ -50,6 +91,13 @@ const addHandlers = () => {
   $('#show-item').on('submit', onShowItem)
   $('#update-item').on('submit', onUpdateItem)
   $('.content').on('click', onGetItems)
+  // HANDLERS FOR CATEGORIES
+  $('#create-category').on('submit', onCreateCategory)
+  $('#delete-category').on('submit', onDeleteCategory)
+  $('#getcategories').on('click', onGetCategories)
+  $('#show-category').on('submit', onShowCategory)
+  $('#update-category').on('submit', onUpdateCategory)
+  $('.content').on('click', onGetCategories)
 }
 
 module.exports = {
@@ -58,5 +106,10 @@ module.exports = {
   onDeleteItem,
   onGetItems,
   onShowItem,
-  onUpdateItem
+  onUpdateItem,
+  onCreateCategory,
+  onDeleteCategory,
+  onGetCategories,
+  onShowCategory,
+  onUpdateCategory
 }

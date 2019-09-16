@@ -26,8 +26,13 @@ const showItem = {
   season: 'season',
   status: 'status'
 }
+const displayCategory = {
+  name: 'name',
+  description: 'description'
+}
 module.exports = {
   limit,
   displayItem,
-  showItem
+  showItem,
+  displayCategory
 }

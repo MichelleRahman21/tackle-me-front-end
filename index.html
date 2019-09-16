@@ -163,14 +163,63 @@
     </section>
     <br>
 
-    <!-- FORMS GET ITEMS -->
-    <!-- <p class="p-show"> You want to see what's inside? </p><br>
-               <form id="get-item">
-               <br><br>
-               <input type="submit" value="Open the closet!">
-               </form>
-               </section>
-               <br> -->
+    <!-- FORMS CATEGORIES  -->
+    <button id="getcategories" class="btn btn-outline-dark">Get your categories!</button><br>
+
+    <!-- FORMS FOR CREATE CATEGORIES -->
+    <br>
+    <p class="p-create">Add a new category for this closet</p><br>
+    <section class="user-forms">
+      <form id="create-category" class="forms-style">
+        Name:<br>
+        <input type="text" name="category[name]" value=" ">
+        <br>
+        Description:<br>
+        <input type="text" name="category[description]" value=" ">
+        <br>
+        <input type="submit" class="btn btn-outline-dark" value="Add a new category!">
+      </form>
+      <br>
+
+      <!-- FORMS FOR UPDATE CATEGORIES -->
+      <p class="p-update">Chane the name of your categories</p><br>
+      <form id="update-category" class="forms-style">
+        ID:<br>
+        <input type="text" name="category[id]" value=" ">
+        <br>
+        Name:<br>
+        <input type="text" name="category[name]" value=" ">
+        <br>
+        Description:<br>
+        <input type="text" name="category[description]" value=" ">
+        <br>
+        <input type="submit" class="btn btn-outline-dark" value="Update a category">
+      </form>
+    </section>
+    <br>
+
+    <!-- FORMS DElETTING CATEGORY-->
+    <p class="p-delete">You might not need this category anymore</p><br>
+    <form id="delete-category" class="btn btn-outline-dark" class="forms-style">
+      ID:<br>
+      <input type="text" name="category[id]" value=" ">
+      <br><br>
+      <input type="submit" value="Delete category">
+    </form>
+    </section>
+    <br>
+
+    <!-- FORMS SHOW  CATEGORY -->
+    <br>
+    <p class="p-show" class="forms-style">This is where you'll be able to find a category</p><br>
+    <form id="show-category" class="btn btn-outline-dark">
+      ID:<br>
+      <input type="text" name="category[id]" value=" ">
+      <br><br>
+      <input type="submit" value="See an category!">
+    </form>
+    </section>
+    <br>
 
 
     <!-- BUTTON SECTION -->

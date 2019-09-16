@@ -1,4 +1,5 @@
 {{#each items as |item|}}
+{{#each categories as |category|}}
 
 <div class="creating">
   <!-- <script id="template" type="text/x-handlebars-template"> -->
@@ -13,6 +14,12 @@
           <p> Status: {{item.status}} </p><br>
 </div>
 
+<div class="creating-category">
 
+<p> ID: {{category.id}} </p>
+  <p> Name: {{category.name}} </p>
+    <p> Description: {{category.description}} </p>
+</div>
 
+{{/each}}
 {{/each}}

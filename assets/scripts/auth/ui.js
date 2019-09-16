@@ -1,6 +1,7 @@
 'use strict'
 const store = require('../store')
 const itemHandlebars = require('../templates/item-listing.handlebars')
+
 // USER SIGN-UP SUCCESS AND FAILURE
 
 const signUpSuccess = function (data) {
@@ -30,8 +31,10 @@ const signInSuccess = function (data) {
   $('#getitems').show()
   const getItemsHtml = itemHandlebars({ items: data.items })
   $('.content').html(getItemsHtml)
-
-  // DELETE THE GAME STUFF
+  // SHOW THE CONTENT FOR CATEGORIES
+  $('#getcategories').show()
+  const getCategoriesHtml = itemHandlebars({ categories: data.categories })
+  $('.content').html(getCategoriesHtml)
 }
 
 const signInFailure = function (data) {
@@ -58,6 +61,7 @@ const signOutSuccess = function () {
   $('#sign-in').show()
   // get the sign-up out when signing-out
   $('#sign-up').show()
+  $('.content').hide()
   $('#change-your-password').hide()
   $('.ui').hide()
   $('.content').empty()
