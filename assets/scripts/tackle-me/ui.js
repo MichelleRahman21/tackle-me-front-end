@@ -1,6 +1,7 @@
 'use strict'
 
 const tackleMeFrontEnd = require('../templates/item-listing.handlebars')
+const tackleMeFrontEndCategory = require('../templates/category-listing.handlebars')
 //  HERE IS WHERE I DISPLAY THE MESSAGE TO THE USERS
 
 const getItemsSuccess = (data) => {
@@ -45,18 +46,18 @@ const updateItemSuccess = (data) => {
 
 // THIS IS THE SECTION FOR MY CATEGORIES
 const getCategoriesSuccess = (data) => {
-  const getCategoriesHtml = tackleMeFrontEnd({ categories: data.categories })
-  $('.content').html(getCategoriesHtml)
+  const getCategoriesHtml = tackleMeFrontEndCategory({ categories: data.categories })
+  $('.contentCategory').html(getCategoriesHtml)
   $('.user-message').text('This is your category!')
 }
 
 const clearCategories = () => {
-  $('.content').empty()
+  $('.contentCategory').empty()
 }
 
 const createCategorySuccess = (data) => {
-  const createItemHtml = tackleMeFrontEnd({item: data.item})
-  $('.content').html(createItemHtml)
+  const createItemHtml = tackleMeFrontEndCategory({item: data.item})
+  $('.contentCategory').html(createItemHtml)
   $('form').trigger('reset')
   $('.user-message').text('You added a category!')
 }
@@ -68,13 +69,13 @@ const deleteCategorySuccess = () => {
 }
 
 const showCategorySuccess = (data) => {
-  const showCategoryHtml = tackleMeFrontEnd({category: data.category})
-  $('.content').html(showCategoryHtml)
+  const showCategoryHtml = tackleMeFrontEndCategory({category: data.category})
+  $('.contentCategory').html(showCategoryHtml)
   $('form').trigger('reset')
 }
 const updateCategorySuccess = (data) => {
-  const updateCategoryHtml = tackleMeFrontEnd({category: data.category})
-  $('.content').html(updateCategoryHtml)
+  const updateCategoryHtml = tackleMeFrontEndCategory({category: data.category})
+  $('.contentCategory').html(updateCategoryHtml)
   $('form').trigger('reset')
   $('.user-message').text('Go check the closet to see your categories!')
 }

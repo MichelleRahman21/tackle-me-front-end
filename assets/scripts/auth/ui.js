@@ -1,6 +1,7 @@
 'use strict'
 const store = require('../store')
 const itemHandlebars = require('../templates/item-listing.handlebars')
+const categoryHandlebars = require('../templates/category-listing.handlebars')
 
 // USER SIGN-UP SUCCESS AND FAILURE
 
@@ -33,8 +34,8 @@ const signInSuccess = function (data) {
   $('.content').html(getItemsHtml)
   // SHOW THE CONTENT FOR CATEGORIES
   $('#getcategories').show()
-  const getCategoriesHtml = itemHandlebars({ categories: data.categories })
-  $('.content').html(getCategoriesHtml)
+  const getCategoriesHtml = categoryHandlebars({ categories: data.categories })
+  $('.contentCategory').html(getCategoriesHtml)
 }
 
 const signInFailure = function (data) {
@@ -62,9 +63,11 @@ const signOutSuccess = function () {
   // get the sign-up out when signing-out
   $('#sign-up').show()
   $('.content').hide()
+  $('.contentCategory').hide()
   $('#change-your-password').hide()
   $('.ui').hide()
   $('.content').empty()
+  ('.contentCategory').empty()
 
   // SEE WHAT UI WAS IN THE LAST PROJECT
   // DELETE GAME STUFF

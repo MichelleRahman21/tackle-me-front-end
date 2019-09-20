@@ -97,7 +97,7 @@ const addHandlers = () => {
   $('#getcategories').on('click', onGetCategories)
   $('#show-category').on('submit', onShowCategory)
   $('#update-category').on('submit', onUpdateCategory)
-  $('.content').on('click', onGetCategories)
+  $('.contentCategory').on('click', onGetCategories)
 }
 
 module.exports = {
