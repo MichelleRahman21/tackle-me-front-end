@@ -47,17 +47,17 @@ const updateItemSuccess = (data) => {
 // THIS IS THE SECTION FOR MY CATEGORIES
 const getCategoriesSuccess = (data) => {
   const getCategoriesHtml = tackleMeFrontEndCategory({ categories: data.categories })
-  $('.contentCategory').html(getCategoriesHtml)
+  $('#content-category').html(getCategoriesHtml)
   $('.user-message').text('This is your category!')
 }
 
 const clearCategories = () => {
-  $('.contentCategory').empty()
+  $('#content-category').empty()
 }
 
 const createCategorySuccess = (data) => {
   const createItemHtml = tackleMeFrontEndCategory({item: data.item})
-  $('.contentCategory').html(createItemHtml)
+  $('#content-category').html(createItemHtml)
   $('form').trigger('reset')
   $('.user-message').text('You added a category!')
 }
@@ -70,12 +70,12 @@ const deleteCategorySuccess = () => {
 
 const showCategorySuccess = (data) => {
   const showCategoryHtml = tackleMeFrontEndCategory({category: data.category})
-  $('.contentCategory').html(showCategoryHtml)
+  $('#content-category').html(showCategoryHtml)
   $('form').trigger('reset')
 }
 const updateCategorySuccess = (data) => {
   const updateCategoryHtml = tackleMeFrontEndCategory({category: data.category})
-  $('.contentCategory').html(updateCategoryHtml)
+  $('#content-category').html(updateCategoryHtml)
   $('form').trigger('reset')
   $('.user-message').text('Go check the closet to see your categories!')
 }

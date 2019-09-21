@@ -67,7 +67,7 @@ const onGetCategories = (event) => {
   const data = getFormFields(event.target)
   // const data = getFormFields(event.target)
   api.getCategories(data)
-    .then(ui.getItemsSuccess)
+    .then(ui.getCategoriesSuccess)
     .catch(ui.failure)
 }
 const onShowCategory = (event) => {
@@ -97,7 +97,7 @@ const addHandlers = () => {
   $('#getcategories').on('click', onGetCategories)
   $('#show-category').on('submit', onShowCategory)
   $('#update-category').on('submit', onUpdateCategory)
-  $('.contentCategory').on('click', onGetCategories)
+  $('#getcategories').on('click', onGetCategories)
 }
 
 module.exports = {
