@@ -56,7 +56,7 @@ const clearCategories = () => {
 }
 
 const createCategorySuccess = (data) => {
-  const createItemHtml = tackleMeFrontEndCategory({item: data.item})
+  const createItemHtml = tackleMeFrontEndCategory({category: data.category})
   $('#content-category').html(createItemHtml)
   $('form').trigger('reset')
   $('.user-message').text('You added a category!')
