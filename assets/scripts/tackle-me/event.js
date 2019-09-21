@@ -6,7 +6,6 @@ const ui = require('./ui.js')
 // ACTIONS FOR ITEMS
 const onCreateItem = (event) => {
   event.preventDefault()
-  // console.log(event)
   const data = getFormFields(event.target)
   api.createItem(data)
     .then(ui.createItemSuccess)
@@ -15,7 +14,6 @@ const onCreateItem = (event) => {
 const onDeleteItem = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  // console.log(data)
   api.deleteItem(data.item.id)
     .then(() => onGetItems(event))
     .then(ui.deleteItemSuccess)
@@ -24,7 +22,6 @@ const onDeleteItem = (event) => {
 const onGetItems = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  // const data = getFormFields(event.target)
   api.getItems(data)
     .then(ui.getItemsSuccess)
     .catch(ui.failure)
@@ -47,7 +44,6 @@ const onUpdateItem = (event) => {
 // ACTIONS FOR CATEGORIES
 const onCreateCategory = (event) => {
   event.preventDefault()
-  // console.log(event)
   const data = getFormFields(event.target)
   api.createCategory(data)
     .then(ui.createCategorySuccess)
@@ -56,7 +52,6 @@ const onCreateCategory = (event) => {
 const onDeleteCategory = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  // console.log(data)
   api.deleteCategory(data.category.id)
     .then(() => onGetItems(event))
     .then(ui.deleteCategorySuccess)
@@ -65,7 +60,6 @@ const onDeleteCategory = (event) => {
 const onGetCategories = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  // const data = getFormFields(event.target)
   api.getCategories(data)
     .then(ui.getCategoriesSuccess)
     .catch(ui.failure)
