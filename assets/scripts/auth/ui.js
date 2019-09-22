@@ -67,7 +67,7 @@ const signOutSuccess = function () {
   $('#change-your-password').hide()
   $('.ui').hide()
   $('.content').empty()
-  ('.contentCategory').empty()
+  $('.contentCategory').empty()
 
   // SEE WHAT UI WAS IN THE LAST PROJECT
   // DELETE GAME STUFF

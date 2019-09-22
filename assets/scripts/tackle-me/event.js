@@ -53,7 +53,7 @@ const onDeleteCategory = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.deleteCategory(data.category.id)
-    .then(() => onGetItems(event))
+    .then(() => onGetCategories(event))
     .then(ui.deleteCategorySuccess)
     .catch(ui.failure)
 }
@@ -74,7 +74,7 @@ const onShowCategory = (event) => {
 const onUpdateCategory = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  api.createCategory(data)
+  api.updateCategory(data)
     .then(ui.updateCategorySuccess)
     .catch(ui.failure)
 }

@@ -56,18 +56,17 @@ const clearCategories = () => {
 }
 
 const createCategorySuccess = (data) => {
-  const createItemHtml = tackleMeFrontEndCategory({category: data.category})
-  $('#content-category').html(createItemHtml)
+  const createCategoryHtml = tackleMeFrontEndCategory({category: data.category})
+  $('#content-category').html(createCategoryHtml)
   $('form').trigger('reset')
   $('.user-message').text('You added a category!')
 }
 
-const deleteCategorySuccess = () => {
+const deleteCategorySuccess = (data) => {
   // $('.content').remove()
   $('form').trigger('reset')
-  $('.user-message').text('You deleted a category!')
+  $('.user-message-delete').text('You deleted a category!')
 }
-
 const showCategorySuccess = (data) => {
   const showCategoryHtml = tackleMeFrontEndCategory({category: data.category})
   $('#content-category').html(showCategoryHtml)
