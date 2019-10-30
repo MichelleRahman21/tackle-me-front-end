@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tackle-Me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <div>
+    <div class="container">
+      <h1 class="display-1 animated bounceInDown title">TACKLE ME!</h1>
+      <p class="lead" >Manage your closet.</p>
+    </div>
+  </div>
+  <br>
+
+  <br>
+  <div class="content" id="content"></div>
+
+  <!-- <div class="content-show" id="content-show"></div> -->
+
+  <div class="modal fade" id="statsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Stats</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="user-status"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </section>
+  <!-- BUTTON SECTION END -->
+  <!-- USER MESSAGE -->
+
+  <section class="d-flex justify-content-center">
+    <div class="user-message"></div>
+  </section>
+  <br>
+  <section class="d-flex justify-content-center">
+    <div class="user-message-delete"></div>
+  </section>
+  <br>
+  <div class="forms-to-hide">
+    <button id="getitems" class="btn btn-dark b">Get your items</button><br>
+  </div>
+  <!-- USER MESSAGE END  -->
+  <!-- SIGN-IN/ SIGN-UP DIVS  -->
+  <div class="sign-in-container">
+
+    <form class="auth-form" id="sign-up">
+      <fieldset>
+        <legend>Sign Up</legend>
+        <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
+        <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+        <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Password Confirmation">
+        <button type="submit" class="btn btn-dark b">sign up</button>
+        <!-- <p>Already have an account? <a class="sign-in-link" href="#">Click here to sign in</a>.</p> -->
+      </fieldset>
+    </form>
+
+    <form class="auth-form" id="sign-in">
+      <fieldset>
+        <legend>Sign In</legend>
+        <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
+        <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+        <button type="submit" class="btn btn-dark b">sign in</button>
+        <!-- <p>Join us! <a class="sign-up-link" href="#">Click here to sign up</a>.</p> -->
+      </fieldset>
+    </form>
+  </div>
+  <br>
+
+
+    <!-- FORMS FOR CREATE -->
+    <br>
+    <p class="p-create">You can add down below anything that you've recently purchased</p><br>
+    <section class="user-forms">
+      <form id="create-item" class="forms-style">
+        Name:<br>
+        <input type="text" name="item[name]" value=" ">
+        <br>
+        Description:<br>
+        <input type="text" name="item[description]" value=" ">
+        <br>
+        Color:<br>
+        <input type="text" name="item[color]" value=" ">
+        <br>
+        Season:<br>
+        <input type="text" name="item[season]" value=" ">
+        <br>
+        Status:<br>
+        <input type="text" name="item[status]" value=" ">
+        <br><br>
+        <input type="submit" class="btn btn-dark b" value="Add something to your closet!">
+      </form>
+      <br>
+
+      <!-- FORMS FOR UPDATE -->
+      <p class="p-update">Is any of your items getting to old? Loosing it's color? Save it here! </p><br>
+      <form id="update-item" class="forms-style">
+        ID:<br>
+        <input type="text" name="item[id]" value=" ">
+        <br>
+        Name:<br>
+        <input type="text" name="item[name]" value=" ">
+        <br>
+        Description:<br>
+        <input type="text" name="item[description]" value=" ">
+        <br>
+        Color:<br>
+        <input type="text" name="item[color]" value=" ">
+        <br>
+        Season:<br>
+        <input type="text" name="item[season]" value=" ">
+        <br>
+        Status:<br>
+        <input type="text" name="item[status]" value=" ">
+        <br><br>
+        <input type="submit" class="btn btn-dark b" value="Update an item">
+      </form>
+    </section>
+    <br>
+
+    <!-- FORMS DElETTING ITEM -->
+    <p class="p-delete">Tackle me or donate me!</p><br>
+    <form id="delete-item" class="btn btn-outline-dark" class="forms-style">
+      ID:<br>
+      <input type="text" name="item[id]" value=" ">
+      <br><br>
+      <input type="submit" value="Delete">
+    </form>
+    </section>
+    <br>
+
+    <!-- FORMS SHOW  ITEM -->
+    <br>
+    <p class="p-show" class="forms-style">See any of your items by id!</p><br>
+    <form id="show-item" class="btn btn-dark b">
+      ID:<br>
+      <input type="text" name="item[id]" value=" ">
+      <br><br>
+      <input type="submit" value="See an item!">
+    </form>
+    </section>
+    <br>
+    <!-- THIS IS A TEST -->
+<div class="contentCategory" id="content-category"></div>
+    <!-- FORMS CATEGORIES  -->
+    <br>
+    <button id="getcategories" class="btn btn-dark b">Get your categories!</button><br>
+
+    <!-- FORMS FOR CREATE CATEGORIES -->
+    <br>
+    <p class="p-create">Add a new category for this closet</p><br>
+    <section class="user-forms">
+      <form id="create-category" class="forms-style">
+        Name:<br>
+        <input type="text" name="category[name]" value=" ">
+        <br>
+        Description:<br>
+        <input type="text" name="category[description]" value=" ">
+        <br>
+        <input type="submit" class="btn btn-dark b" value="Add a new category!">
+      </form>
+      <br>
+
+      <!-- FORMS FOR UPDATE CATEGORIES -->
+      <p class="p-update">Change the name of your categories</p><br>
+      <form id="update-category" class="forms-style">
+        ID:<br>
+        <input type="text" name="category[id]" value=" ">
+        <br>
+        Name:<br>
+        <input type="text" name="category[name]" value=" ">
+        <br>
+        Description:<br>
+        <input type="text" name="category[description]" value=" ">
+        <br>
+        <input type="submit" class="btn btn-dark b" value="Update a category">
+      </form>
+    </section>
+    <br>
+
+    <!-- FORMS DElETTING CATEGORY-->
+    <p class="p-delete">You might not need this category anymore</p><br>
+    <form id="delete-category" class="btn btn-dark b" class="forms-style">
+      ID:<br>
+      <input type="text" name="category[id]" value=" ">
+      <br><br>
+      <input type="submit" value="Delete category">
+    </form>
+    </section>
+    <br>
+
+
+  <!-- OPTION 1 MUSIC  -->
+  <div>
+    <br>
+    <p class="music"> Hit play to any of this songs and listen to music while you tackle your closet! </p><br>
+    <audio src="public/music.mp3" controls>
+      <p> Your browser does not support the audio element </p>
+    </audio>
+  </div>
+  <!-- OPTION 2 MUSIC -->
+  <br>
+  <div>
+    <audio src="public/music2.mp3" controls>
+      <p> Your browser does not support the audio element </p>
+    </audio>
+  </div>
+  <!-- OPTION 3 MUSIC -->
+  <br>
+  <div>
+    <audio src="public/music3.mp3" controls>
+      <p> Your browser does not support the audio element </p>
+    </audio>
+  </div>
+
+  <!-- BUTTON SECTION -->
+  <section class="buttons">
+    <div class="change-password-hide">
+      <div class="modal fade" id="change-password" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+
+              <form id="change-password-form">
+                <div class="change-password-message"></div>
+                <input type="password" name="passwords[old]" placeholder="old password">
+                <input type="password" name="passwords[new]" placeholder="new password">
+                <input type="submit" value="Change Password">
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <br>
+      <button id="change-your-password" type="button" class="btn btn-dark b" data-toggle="modal" data-target="#change-password"> Change your password </button>
+    </div>
+
+    <!-- SIGN-OUT BUTTON -->
+    <div class="hide-sign-out">
+      <form id="sign-out">
+        <br>
+        <button type="submit" class="btn btn-dark b">Sign out</button>
+      </form>
+      <br>
+    </div>
+</div>
+</body>
+
+</html>
