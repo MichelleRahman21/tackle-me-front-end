@@ -14,10 +14,10 @@
 </head>
 
 <body>
-  <div class="jumbotron jumbotron-fluid">
+  <div>
     <div class="container">
       <h1 class="display-1 animated bounceInDown title">TACKLE ME!</h1>
-      <p class="lead">Manage your closet.</p>
+      <p class="lead" >Manage your closet.</p>
     </div>
   </div>
   <br>
@@ -58,6 +58,9 @@
     <div class="user-message-delete"></div>
   </section>
   <br>
+  <div class="forms-to-hide">
+    <button id="getitems" class="btn btn-dark b">Get your items</button><br>
+  </div>
   <!-- USER MESSAGE END  -->
   <!-- SIGN-IN/ SIGN-UP DIVS  -->
   <div class="sign-in-container">
@@ -68,7 +71,7 @@
         <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
         <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
         <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Password Confirmation">
-        <button type="submit" class="btn btn-primary">sign up</button>
+        <button type="submit" class="btn btn-dark b">sign up</button>
         <!-- <p>Already have an account? <a class="sign-in-link" href="#">Click here to sign in</a>.</p> -->
       </fieldset>
     </form>
@@ -78,21 +81,13 @@
         <legend>Sign In</legend>
         <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
         <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
-        <button type="submit" class="btn btn-primary">sign in</button>
+        <button type="submit" class="btn btn-dark b">sign in</button>
         <!-- <p>Join us! <a class="sign-up-link" href="#">Click here to sign up</a>.</p> -->
       </fieldset>
     </form>
   </div>
   <br>
-  <!-- SIGN-OUT BUTTON -->
-  <div class="hide-sign-out">
-    <form id="sign-out">
-      <button type="submit" class="btn btn-primary">Sign out</button>
-    </form>
-    <br>
-  </div>
-  <div class="forms-to-hide">
-    <button id="getitems" class="btn btn-outline-dark">Get your items</button><br>
+
 
     <!-- FORMS FOR CREATE -->
     <br>
@@ -114,7 +109,7 @@
         Status:<br>
         <input type="text" name="item[status]" value=" ">
         <br><br>
-        <input type="submit" class="btn btn-outline-dark" value="Add something to your closet!">
+        <input type="submit" class="btn btn-dark b" value="Add something to your closet!">
       </form>
       <br>
 
@@ -139,7 +134,7 @@
         Status:<br>
         <input type="text" name="item[status]" value=" ">
         <br><br>
-        <input type="submit" class="btn btn-outline-dark" value="Update an item">
+        <input type="submit" class="btn btn-dark b" value="Update an item">
       </form>
     </section>
     <br>
@@ -158,7 +153,7 @@
     <!-- FORMS SHOW  ITEM -->
     <br>
     <p class="p-show" class="forms-style">See any of your items by id!</p><br>
-    <form id="show-item" class="btn btn-outline-dark">
+    <form id="show-item" class="btn btn-dark b">
       ID:<br>
       <input type="text" name="item[id]" value=" ">
       <br><br>
@@ -169,7 +164,8 @@
     <!-- THIS IS A TEST -->
 <div class="contentCategory" id="content-category"></div>
     <!-- FORMS CATEGORIES  -->
-    <button id="getcategories" class="btn btn-outline-dark">Get your categories!</button><br>
+    <br>
+    <button id="getcategories" class="btn btn-dark b">Get your categories!</button><br>
 
     <!-- FORMS FOR CREATE CATEGORIES -->
     <br>
@@ -182,12 +178,12 @@
         Description:<br>
         <input type="text" name="category[description]" value=" ">
         <br>
-        <input type="submit" class="btn btn-outline-dark" value="Add a new category!">
+        <input type="submit" class="btn btn-dark b" value="Add a new category!">
       </form>
       <br>
 
       <!-- FORMS FOR UPDATE CATEGORIES -->
-      <p class="p-update">Chane the name of your categories</p><br>
+      <p class="p-update">Change the name of your categories</p><br>
       <form id="update-category" class="forms-style">
         ID:<br>
         <input type="text" name="category[id]" value=" ">
@@ -198,14 +194,14 @@
         Description:<br>
         <input type="text" name="category[description]" value=" ">
         <br>
-        <input type="submit" class="btn btn-outline-dark" value="Update a category">
+        <input type="submit" class="btn btn-dark b" value="Update a category">
       </form>
     </section>
     <br>
 
     <!-- FORMS DElETTING CATEGORY-->
     <p class="p-delete">You might not need this category anymore</p><br>
-    <form id="delete-category" class="btn btn-outline-dark" class="forms-style">
+    <form id="delete-category" class="btn btn-dark b" class="forms-style">
       ID:<br>
       <input type="text" name="category[id]" value=" ">
       <br><br>
@@ -214,52 +210,10 @@
     </section>
     <br>
 
-    <!-- FORMS SHOW  CATEGORY -->
-    <!-- <br>
-    <p class="p-show" class="forms-style">This is where you'll be able to find a category</p><br>
-    <form id="show-category" class="btn btn-outline-dark">
-      ID:<br>
-      <input type="text" name="category[id]" value=" ">
-      <br><br>
-      <input type="submit" value="See an category!">
-    </form>
-    </section>
-    <br> -->
 
-
-    <!-- BUTTON SECTION -->
-    <section class="buttons">
-      <div class="change-password-hide">
-        <div class="modal fade" id="change-password" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-
-
-                <form id="change-password-form">
-                  <div class="change-password-message"></div>
-                  <input type="password" name="passwords[old]" placeholder="old password">
-                  <input type="password" name="passwords[new]" placeholder="new password">
-                  <input type="submit" value="Change Password">
-                </form>
-              </div>
-
-            </div>
-          </div>
-        </div>
-        <br>
-        <button id="change-your-password" type="button" class="btn btn-primary" data-toggle="modal" data-target="#change-password"> Change your password </button>
-      </div>
-
-  </div>
   <!-- OPTION 1 MUSIC  -->
   <div>
+    <br>
     <p class="music"> Hit play to any of this songs and listen to music while you tackle your closet! </p><br>
     <audio src="public/music.mp3" controls>
       <p> Your browser does not support the audio element </p>
@@ -279,6 +233,46 @@
       <p> Your browser does not support the audio element </p>
     </audio>
   </div>
+
+  <!-- BUTTON SECTION -->
+  <section class="buttons">
+    <div class="change-password-hide">
+      <div class="modal fade" id="change-password" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+
+              <form id="change-password-form">
+                <div class="change-password-message"></div>
+                <input type="password" name="passwords[old]" placeholder="old password">
+                <input type="password" name="passwords[new]" placeholder="new password">
+                <input type="submit" value="Change Password">
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <br>
+      <button id="change-your-password" type="button" class="btn btn-dark b" data-toggle="modal" data-target="#change-password"> Change your password </button>
+    </div>
+
+    <!-- SIGN-OUT BUTTON -->
+    <div class="hide-sign-out">
+      <form id="sign-out">
+        <br>
+        <button type="submit" class="btn btn-dark b">Sign out</button>
+      </form>
+      <br>
+    </div>
+</div>
 </body>
 
 </html>

@@ -1,8 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~animate.css/animate.css';
 @import url('https://fonts.googleapis.com/css?family=Gruppo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Stoke|Zilla+Slab+Highlight&display=swap');
 
-
+.b {
+  font-size: 20px;
+  font-family:  'Gruppo', cursive;
+}
 .title {
   animation-duration: 1s;
   animation-delay: .5s;
@@ -16,7 +20,7 @@ h1 {
 }
 
 body {
-  background-image: url('./public/Option1.jpg');
+  background-image: url('https://i.imgur.com/nDOprec.jpg');
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
@@ -29,6 +33,7 @@ body {
 legend {
   font-family:  'Gruppo', cursive;
   font-size: 25px;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 input[type=text], select {
@@ -42,10 +47,11 @@ input[type=text], select {
 }
 
 .music {
-  font-family:  'Gruppo', cursive;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: bold;
   text-align: justify;
+  background-color: white;
+  font-family: 'Zilla Slab Highlight', cursive;
 }
 
 .forms-to-hide {
@@ -69,7 +75,7 @@ input[type=text], select {
 }
 
 .jumbotron {
-background-color:rgba(208, 224, 251, 1);
+// background-color: rgba(208, 224, 251, 1);
 padding-top: .5%;
 padding-bottom: .5%;
 }
@@ -87,10 +93,12 @@ padding-bottom: .5%;
 }
 
 .creating {
-  font-family:  'Gruppo', cursive;
   font-size: 20px;
   font-weight: bold;
-  color: rgba(162, 75, 17, 1);
+  justify-content: center;
+  background-color: white;
+  font-family: 'Zilla Slab Highlight', cursive;
+  // color: rgba(162, 75, 17, 1);
 }
 
 // .media-body {
@@ -101,33 +109,44 @@ padding-bottom: .5%;
 // }
 
 .p-create {
+
   font-family:  'Gruppo', cursive;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
-  color: rgba(162, 75, 17, 1);
+  justify-content: center;
+  background-color: white;
+  font-family: 'Zilla Slab Highlight', cursive;
 }
 
 .p-update {
   font-family:  'Gruppo', cursive;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
-  color: rgba(162, 75, 17, 1);
+  background-color: white;
+  font-family: 'Zilla Slab Highlight', cursive;
 }
 
 .p-delete {
   font-family:  'Gruppo', cursive;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
-  color: rgba(162, 75, 17, 1);
+  background-color: white;
+  font-family: 'Zilla Slab Highlight', cursive;
 }
 
 .p-show {
   font-family:  'Gruppo', cursive;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
-  color: rgba(162, 75, 17, 1);
+  background-color: white;
+  font-family: 'Zilla Slab Highlight', cursive;
 }
 
+.user-message {
+  font-size: 15px;
+  background-color: white;
+  font-family: 'Zilla Slab Highlight', cursive;
+}
 #getitems {
   display: none;
 }
